@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "first_name": "Barth",
+        "last_name": "Fairney",
+        "email": "bfairney0@dagondesign.com",
+        "gender": "Male"
+    },
+    {
+        "id": 2,
+        "first_name": "Addy",
+        "last_name": "Brushfield",
+        "email": "abrushfield1@imgur.com",
+        "gender": "Male"
+    },
+    {
+        "id": 3,
+        "first_name": "Wallache",
+        "last_name": "Comino",
+        "email": "wcomino2@weather.com",
+        "gender": "Male"
+    },
+    {
+        "id": 4,
+        "first_name": "Hewett",
+        "last_name": "Guppie",
+        "email": "hguppie3@dropbox.com",
+        "gender": "Male"
+    },
+    {
+        "id": 5,
+        "first_name": "Dusty",
+        "last_name": "Gentiry",
+        "email": "dgentiry4@issuu.com",
+        "gender": "Female"
+    }
+]

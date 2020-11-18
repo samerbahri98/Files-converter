@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+    <record>
+        <id>1</id>
+        <first_name>Kathe</first_name>
+        <last_name>Claessens</last_name>
+        <email>kclaessens0@phpbb.com</email>
+        <gender>Female</gender>
+    </record>
+    <record>
+        <id>2</id>
+        <first_name>Zollie</first_name>
+        <last_name>Ramm</last_name>
+        <email>zramm1@bloglovin.com</email>
+        <gender>Male</gender>
+    </record>
+    <record>
+        <id>3</id>
+        <first_name>Ossie</first_name>
+        <last_name>Kleinstein</last_name>
+        <email>okleinstein2@edublogs.org</email>
+        <gender>Male</gender>
+    </record>
+    <record>
+        <id>4</id>
+        <first_name>Opaline</first_name>
+        <last_name>McLelland</last_name>
+        <email>omclelland3@mayoclinic.com</email>
+        <gender>Female</gender>
+    </record>
+    <record>
+        <id>5</id>
+        <first_name>Travus</first_name>
+        <last_name>Ragles</last_name>
+        <email>tragles4@ehow.com</email>
+        <gender>Male</gender>
+    </record>
+</dataset>
