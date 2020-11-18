@@ -16,6 +16,33 @@ public class SQL extends Parser {
         super(inputFile);
     }
 
+    public List<Map<String, String>> parse() {
+        this.argument = "";
+        List<Map<String, String>> myMap = new ArrayList<Map<String, String>>();
+        try {
+            Scanner myReader = new Scanner(this.inputFile);
+            while (myReader.hasNextLine()) {
+                this.argument = this.argument + myReader.nextLine() + "\n";
+            }
+            myReader.close();
+            String[] rows = this.argument.split("\n");
+            String[] keys = rows[0].split(",");
+
+            for (int i = 1; i < rows.length; i++) {
+                String[] values = rows[i].split(",");
+                Map<String, String> myMap1 = new HashMap<String, String>();
+                for (int j = 0; j < keys.length; j++) {
+                    myMap1.put(keys[j], values[j]);
+                }
+                myMap.add(0, myMap1);
+            }
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        return myMap;
+    }
+
     public void stringify() {
         this.argument = "";
         for (Map<String, String> map : this.tree) {
@@ -29,7 +56,8 @@ public class SQL extends Parser {
                 keys.add(mentry.getKey().toString());
                 values.add("\"" + mentry.getValue().toString() + "\"");
             }
-            this.argument = this.argument + " ( " + String.join(" , ",keys) + " ) VALUES ( " +  String.join(" , ",values) + " );\n";
+            this.argument = this.argument + " ( " + String.join(" , ", keys) + " ) VALUES ( "
+                    + String.join(" , ", values) + " );\n";
         }
         try {
             FileWriter nWriter = new FileWriter(outputFile.getAbsolutePath());

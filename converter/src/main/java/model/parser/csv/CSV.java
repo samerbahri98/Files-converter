@@ -44,28 +44,34 @@ public class CSV extends Parser {
         return myMap;
     }
 
-    public void stringify(){
+    public void stringify() {
         this.argument = "";
-        // for (Map<String, String> map : this.tree) {
-        //     this.argument = this.argument + "INSERT INTO " + this.filename;
-        //     Set set = map.entrySet();
-        //     Iterator iterator = set.iterator();
-        //     List<String> keys = new ArrayList<String>();
-        //     List<String> values = new ArrayList<String>();
-        //     while (iterator.hasNext()) {
-        //         Map.Entry mentry = (Map.Entry) iterator.next();
-        //         keys.add(mentry.getKey().toString());
-        //         values.add("\"" + mentry.getValue().toString() + "\"");
-        //     }
-        //     this.argument = this.argument + " ( " + String.join(" , ",keys) + " ) VALUES ( " +  String.join(" , ",values) + " );\n";
-        // }
-        // try {
-        //     FileWriter nWriter = new FileWriter(outputFile.getAbsolutePath());
-        //     nWriter.write(this.argument);
-        //     nWriter.close();
-        // } catch (IOException ex) {
-        //     ex.printStackTrace();
-        // }
+        List<String> keys = new ArrayList<String>();
+        boolean isNotSet = true;
+        for (Map<String, String> map : this.tree) {
+            Set set = map.entrySet();
+            Iterator iterator = set.iterator();
+            List<String> values = new ArrayList<String>();
+
+            while (iterator.hasNext()) {
+                Map.Entry mentry = (Map.Entry) iterator.next();
+                if (isNotSet)
+                    keys.add(mentry.getKey().toString());
+
+                values.add(mentry.getValue().toString());
+            }
+            this.argument = this.argument + String.join(",", values) + "\n";
+            isNotSet = false;
+        }
+        this.argument = String.join(",", keys) + "\n" + this.argument;
+        try {
+            FileWriter nWriter = new FileWriter(outputFile.getAbsolutePath());
+            nWriter.write(this.argument);
+            nWriter.close();
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+
     }
 
 }
