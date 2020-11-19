@@ -2,6 +2,7 @@ package main.java.model.parser.sql;
 
 import main.java.model.parser.Parser;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.*;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -26,10 +27,12 @@ public class SQL extends Parser {
             }
             myReader.close();
             String[] rows = this.argument.split("\n");
-            String[] keys = rows[0].split(",");
 
-            for (int i = 1; i < rows.length; i++) {
-                String[] values = rows[i].split(",");
+            for (int i = 0; i < rows.length; i++) {
+                String[] row = rows[i].split("(?i)INSERT INTO.*?\\(|\\).*?VALUES.*?\\(|\\).*;");
+                String[] keys = row[1].replaceAll("\\s", "").split(",");
+                String[] values = row[2].replaceAll("\\s", "").replaceAll("\"", "").split(",");
+
                 Map<String, String> myMap1 = new HashMap<String, String>();
                 for (int j = 0; j < keys.length; j++) {
                     myMap1.put(keys[j], values[j]);
