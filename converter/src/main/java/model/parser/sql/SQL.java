@@ -1,11 +1,11 @@
-package main.java.model.parser.sql;
+package model.parser.sql;
 
-import main.java.model.parser.Parser;
+import model.parser.Parser;
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.*;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.*;
 
 public class SQL extends Parser {
 

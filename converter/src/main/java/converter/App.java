@@ -1,6 +1,6 @@
 package converter;
 
-import main.java.controller.*;
+import controller.*;
 
 
 /**

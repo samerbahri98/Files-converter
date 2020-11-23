@@ -1,6 +1,6 @@
-package main.java.model.parser.csv;
+package model.parser.csv;
 
-import main.java.model.parser.Parser;
+import model.parser.Parser;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;

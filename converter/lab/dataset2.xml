@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<dataset2>
+    <item>
+        <gender>Male</gender>
+        <last_name>Wingar</last_name>
+        <id>1</id>
+        <first_name>Oran</first_name>
+        <email>owingar0@opera.com</email>
+    </item>
+    <item>
+        <gender>Male</gender>
+        <last_name>Gierhard</last_name>
+        <id>2</id>
+        <first_name>Salomone</first_name>
+        <email>sgierhard1@upenn.edu</email>
+    </item>
+    <item>
+        <gender>Female</gender>
+        <last_name>Fairbanks</last_name>
+        <id>3</id>
+        <first_name>Dalila</first_name>
+        <email>dfairbanks2@wufoo.com</email>
+    </item>
+    <item>
+        <gender>Female</gender>
+        <last_name>Rawdales</last_name>
+        <id>4</id>
+        <first_name>Dasha</first_name>
+        <email>drawdales3@freewebs.com</email>
+    </item>
+    <item>
+        <gender>Female</gender>
+        <last_name>Snoden</last_name>
+        <id>5</id>
+        <first_name>Nancy</first_name>
+        <email>nsnoden4@state.gov</email>
+    </item>
+</dataset2>

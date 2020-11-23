@@ -1,4 +1,4 @@
-package main.java.model.parser;
+package model.parser;
 
 import java.io.File;
 import java.util.*;
